@@ -1,5 +1,6 @@
+
 function adicionarTarefa(){
-    let mensagem = "Tarefa adicionada com sucesso!"
+    let mensagem = "Tarefa adicionada com sucesso!";
     
     let inputTarefa = document.getElementById("inputTarefa")
     let tarefa = inputTarefa.value
@@ -12,8 +13,8 @@ function adicionarTarefa(){
 
     listaTarefas.appendChild(novaTarefa)
 
+
     inputTarefa.value = ""
-
-
-    
 }
+
+
