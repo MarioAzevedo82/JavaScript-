@@ -10,6 +10,7 @@ function adicionarTarefa(){
     if (tarefa == "") {
         let mensagemErro = "Digite uma mensagem para adicioná-la!"
         msn.textContent = mensagemErro
+        
     } else {  
         let mensagem = "Tarefa adicionada com sucesso!";
         msn.textContent = mensagem;
