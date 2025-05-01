@@ -10,9 +10,15 @@
     <div class="container">
         <h1>Boas Vindas!</h1>
         <p>Vamos personalizar sua saudação usando JavaScript!</p>
-        <div class="saudacao">Olá, visitante!</div>
+        <div class="saudacao" id="mensagemSaudacao">Olá, visitante!</div>
+        <button onclick="mudarNome()">Personalizar Saudação</button>
     </div>
-
+    <script>
+        function mudarNome() {
+            let nome = "Mario"
+            document.getElementById('mensagemSaudacao').textContent = "Olá, " + nome + "!"
+        }
+    </script>
 
 </body>
 </html>
