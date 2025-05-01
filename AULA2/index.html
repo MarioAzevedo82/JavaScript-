@@ -11,7 +11,13 @@
     <h1>Lista de Tarefas</h1>
     <p>Adicione suas tarefas!</p>
     <button onclick="adicionarTarefa()">Adicionar tarefa</button>
-    <p id="mesagem"></p>
+    <p id="mensagem"></p>
   </div>
+  <script>
+    function adicionarTarefa(){
+      let mensagem = "Tarefa adicionada com sucesso!"
+      document.getElementById('mensagem').textContent = mensagem
+    }
+  </script>
 </body>
 </html>
