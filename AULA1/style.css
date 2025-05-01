@@ -7,3 +7,14 @@ body {
     margin: 0;
     background-color: #331F19;
 }
+
+.container {
+    text-align: center;
+    background-color: #cbbba7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    border: 2px solid #887D70;
+}
