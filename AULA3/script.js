@@ -10,17 +10,12 @@ function adicionarTarefa(){
     } else {
         let mensagemSucesso = "Tarefa adicionada com sucesso!"
         document.getElementById('mensagem').textContent = mensagemSucesso
+        let listaTarefas = document.getElementById("listaTarefas") 
+        let novaTarefa = document.createElement("li") 
+        novaTarefa.textContent = tarefa 
+        listaTarefas.appendChild(novaTarefa) 
     }
-
-    let listaTarefas = document.getElementById("listaTarefas") 
-    let novaTarefa = document.createElement("li") 
-
-    novaTarefa.textContent = tarefa 
-
-    listaTarefas.appendChild(novaTarefa) 
     
     inputTarefa.value = "" 
-
-
 
   }
