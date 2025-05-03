@@ -8,9 +8,11 @@ function adicionarTarefa(){
     if(tarefa == "") {
         let mensagemErro = "Digite uma tarefa para adicioná-la!"
         mensagem.textContent = mensagemErro
+        mensagem.style.color = '#A34743'
     } else {
         let mensagemSucesso = "Tarefa adicionada com sucesso!"
         mensagem.textContent = mensagemSucesso
+        mensagem.style.color = '#28A745'
 
         const listaTarefas = document.getElementById("listaTarefas") 
         let novaTarefa = document.createElement("li") 
