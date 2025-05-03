@@ -2,7 +2,7 @@
 function adicionarTarefa(){
     
     let inputTarefa = document.getElementById("inputTarefa") 
-    let tarefa = inputTarefa.value 
+    let tarefa = inputTarefa.value.trim() //remove os espaços em branco no início e no fim do código(trim = aparar)
     
     if(tarefa == "") {
         let mensagemErro = "Digite uma tarefa para adicioná-la!"
