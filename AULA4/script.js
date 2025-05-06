@@ -25,8 +25,17 @@ function adicionarTarefa(){
 function renderizarTarefas() {
     const listaTarefas = document.getElementById("listaTarefas") 
 
-
-    let novaTarefa = document.createElement("li") 
-    novaTarefa.textContent = tarefa 
-    listaTarefas.appendChild(novaTarefa)
+    //for itens na lista
+    //1. item inicial (iterador)
+    //2. item final (condição)
+    //3.. se vai de 1 em 1 ou se pula
+    
+    //for(iterador; condição; frequência)
+    let i = 0
+    for (i; i < tarefas.length; i++){
+        let novaTarefa = document.createElement("li") 
+        novaTarefa.textContent = tarefa 
+        listaTarefas.appendChild(novaTarefa)
+    }
 }
+renderizarTarefas()
