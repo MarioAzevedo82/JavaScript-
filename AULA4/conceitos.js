@@ -9,3 +9,8 @@ let frutas = ["maca", "banana", "mamao"]
 alert(frutas.indexOf("banana"))
 
 alert(frutas[0])
+
+alert(frutas.length)
+
+frutas.push("melancia")
+console.log(frutas)
