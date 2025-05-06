@@ -1,40 +1,24 @@
-let tarefas = []
-
 function adicionarTarefa(){
-    const inputTarefa = document.getElementById("inputTarefa")
-    let tarefa = inputTarefa.value.trim()
     
-    const msn = document.getElementById("mensagem")
+    const inputTarefa = document.getElementById("inputTarefa") 
+    let tarefa = inputTarefa.value.trim() //remove os espaços em branco no início e no fim do código(trim = aparar)
+    const mensagem = document.getElementById('mensagem')
     
-    if (tarefa == "") {
-        let mensagemErro = "Digite uma mensagem para adicioná-la!"
-        msn.textContent = mensagemErro
-        
-    } else {  
-        let mensagem = "Tarefa adicionada com sucesso!";
-        msn.textContent = mensagem;
-        tarefas.push(tarefa)
-        renderizarTarefas()
-    }   
-    
-    inputTarefa.value = ""
+    if(tarefa == "") {
+        let mensagemErro = "Digite uma tarefa para adicioná-la!"
+        mensagem.textContent = mensagemErro
+        mensagem.style.color = '#A34743'
+    } else {
+        let mensagemSucesso = "Tarefa adicionada com sucesso!"
+        mensagem.textContent = mensagemSucesso
+        mensagem.style.color = '#28A745'
 
-}
-
-function renderizarTarefas() {
-    const listaTarefas = document.getElementById("listaTarefas")
-    listaTarefas.innerHTML = ""
-    // for itens na lista
-    //1. item inicial (iterador)
-    //2. item final (condicional)
-    //3. se vai de 1 em 1 elemento ou se pula
-
-    //for (iterador, condição, frequencia)
-
-    let i = 0
-    for (i; i < tarefas.length; i++) {   
-        let novaTarefa = document.createElement("li")
-        novaTarefa.textContent = tarefas[i]
-        listaTarefas.appendChild(novaTarefa)
+        const listaTarefas = document.getElementById("listaTarefas") 
+        let novaTarefa = document.createElement("li") 
+        novaTarefa.textContent = tarefa 
+        listaTarefas.appendChild(novaTarefa) 
     }
-}
+    
+    inputTarefa.value = "" 
+
+  }

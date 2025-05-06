@@ -6,11 +6,11 @@
 let frutas = ["maca", "banana", "mamao"]
 //alert(frutas)
 
-alert(frutas.indexOf("banana"))
+// alert(frutas.indexOf("banana"))
 
-alert(frutas[0])
+// alert(frutas[0])
 
-alert(frutas.length)
+// alert(frutas.length)
 
 frutas.push("melancia")
 console.log(frutas)
