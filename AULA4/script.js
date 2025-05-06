@@ -16,13 +16,17 @@ function adicionarTarefa(){
         mensagem.style.color = '#28A745'
 
         tarefas.push(tarefa)
-
-        const listaTarefas = document.getElementById("listaTarefas") 
-        let novaTarefa = document.createElement("li") 
-        novaTarefa.textContent = tarefa 
-        listaTarefas.appendChild(novaTarefa) 
     }
     
     inputTarefa.value = "" 
 
-  }
+}
+
+function renderizarTarefas() {
+    const listaTarefas = document.getElementById("listaTarefas") 
+
+
+    let novaTarefa = document.createElement("li") 
+    novaTarefa.textContent = tarefa 
+    listaTarefas.appendChild(novaTarefa)
+}
