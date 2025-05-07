@@ -1,6 +1,7 @@
+let tarefas = []
+
 function adicionarTarefa(){
 
-    let tarefas = []
     
     const inputTarefa = document.getElementById("inputTarefa") 
     let tarefa = inputTarefa.value.trim() //remove os espaços em branco no início e no fim do código(trim = aparar)
@@ -14,8 +15,8 @@ function adicionarTarefa(){
         let mensagemSucesso = "Tarefa adicionada com sucesso!"
         mensagem.textContent = mensagemSucesso
         mensagem.style.color = '#28A745'
-
         tarefas.push(tarefa)
+        renderizarTarefas()
     }
     
     inputTarefa.value = "" 
@@ -24,18 +25,17 @@ function adicionarTarefa(){
 
 function renderizarTarefas() {
     const listaTarefas = document.getElementById("listaTarefas") 
+    listaTarefas.innerHTML = ""
 
     //for itens na lista
     //1. item inicial (iterador)
     //2. item final (condição)
     //3.. se vai de 1 em 1 ou se pula
-    
     //for(iterador; condição; frequência)
     let i = 0
     for (i; i < tarefas.length; i++){
         let novaTarefa = document.createElement("li") 
-        novaTarefa.textContent = tarefa 
+        novaTarefa.textContent = tarefas[i] 
         listaTarefas.appendChild(novaTarefa)
     }
 }
-renderizarTarefas()
